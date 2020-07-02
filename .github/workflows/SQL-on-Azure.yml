@@ -12,5 +12,5 @@ jobs:
     - uses: Azure/sql-action@v1
       with:
         server-name: sqlaction-server
-        connection-string: ${{ secrets.SQL_CONNECTION_STRING }}
+        connection-string: Server=tcp:sqlaction-server.database.windows.net,1433;Initial Catalog=GithubAction;Persist Security Info=False;User ID=winmaria;Password=VJ.phool1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
         dacpac-package: './Database.dacpac'
